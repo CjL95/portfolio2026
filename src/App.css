@@ -16,13 +16,57 @@
     --title-font: 'Bigshot One', serif;
     --pixel-font: 'Press Start 2P', system-ui;
     --accent-font: 'Knewave', system-ui;
+    --title-size: calc(12px + 1.5vw);
+}
+.hero, .about, .projects, .contact, .footer{
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: right -75px bottom -3px;
+  height: 50vh;
+  border: 20px solid white;
 }
 .hero{
-  background-color: var(--electric-violet);
+    background-color: var(--electric-violet);
   background-image: url(./assets/heroJag.svg);
-  background-size: 120% auto;
-  background-repeat: no-repeat;
+}
+.about{
+  background-color: var(--cyan);
+  background-image: url(./assets/confetti.svg);
+}
+.projects{
+  background-color: var(--magenta);
+  background-image: url(./assets/polygons.svg);
+}
+.contact{
+  background-color: var(--brick);
+  background-image: url(./assets/rug.svg);
+}
+.footer{
+background-color: var(--midnight);
+}
+.footer:before{
+  display:block;
+  content: "";
+  position: relative;
+  z-index: -1;
+  width: 100%;
   height: 50vh;
+  background-image:url(./assets/vaporSunVector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.footer::after{
+  display:block;
+  content: "";
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 50vh;
+  background-image:url(./assets/bluejag.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .heroDivide1, .heroDivide2{
   width: 100%;
@@ -34,10 +78,35 @@
 .profilePic, .heroTxt{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.heroTxt > h1, .profilePic > img{
+.heroTxt span{
+  display: inline-block;
+  width: 80%;
+}
+.profilePic{
+  justify-content: center;
+}
+.heroTxt h1, .profilePic img{
   color: white;
   background-color: var(--dark-gray);
-  border: 14px solid white;
+  border: calc(8px + 0.5vw) solid white;
   font-family: var(--plex);
+}
+.profilePic img{
+    height: calc(200px + 15vw);
+    aspect-ratio: 1 / 1;
+    max-height: 400px;
+}
+.heroTxt h1{
+    font-size: var(--title-size);
+}
+
+/*animations*/
+
+/*media queries*/
+@media (min-width: 960px){
+  .hero{
+    background-size: 110%;
+  }
 }
