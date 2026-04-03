@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Header } from './components/header/Header.jsx'
-import { Footer } from './components/footer/Footer.jsx'
+import { Carousel } from './components/common/carousel.jsx'
 //import {ReactComponent as HeroJag} from './assets/heroJag.svg'
 
 function App() {
@@ -26,20 +26,14 @@ function App() {
         <section className="handwrittenCaption">
           <span className="handwrittenCaption"></span>
         </section>
-        <section className="about row">
-          
-        </section>
-        <section className="projects row">
-          
-        </section>
-        <section className="contact row">
-          
+        <section className="carouselWrapper row">
+          <section className="carousel col-12">
+          </section>
         </section>
         <section className="footer row">
           
         </section>
       </main>
-      <Footer />
     </>
   )
 }
